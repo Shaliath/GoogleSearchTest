@@ -1,7 +1,14 @@
 package project.search.google;
 
-/**
- * Created by dagobert on 24.08.15.
- */
+import org.junit.Before;
+
+import static com.codeborne.selenide.Selenide.open;
+
 public class BeforeStartSearch {
+
+    @Before
+    public void openGoogle() {
+        open("http://google.com/ncr");
+    }
+
 }

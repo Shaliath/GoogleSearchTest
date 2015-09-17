@@ -1,7 +1,19 @@
 package project.search.google;
 
-/**
- * Created by dagobert on 23.08.15.
- */
-public class GoogleSearchTest {
+import org.junit.Test;
+
+public class GoogleSearchTest extends BeforeStartSearch{
+
+    GooglePage page = new GooglePage();
+    @Test
+    public void SearchSelenide() {
+
+        page.findText("selenide");
+
+        page.checkTextInResult("selenide", 10);
+
+        page.checkSize(10);
+
+    }
+
 }
